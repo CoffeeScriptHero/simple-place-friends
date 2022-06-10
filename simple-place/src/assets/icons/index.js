@@ -1,0 +1,16 @@
+export { home } from "./home";
+export { messages } from "./messages";
+export { add } from "./add";
+export { like } from "./like";
+export { comment } from "./comment";
+export { previewcomment } from "./previewcomment";
+export { cross } from "./cross";
+export { people } from "./people";
+export { framephoto } from "./framephoto";
+export { smile } from "./smile";
+export { picture } from "./picture";
+export { leftarrow } from "./leftarrow";
+export { pencil } from "./pencil";
+export { magnifier } from "./magnifier";
+export { circlecross } from "./circlecross";
+export { logout } from "./logout";
