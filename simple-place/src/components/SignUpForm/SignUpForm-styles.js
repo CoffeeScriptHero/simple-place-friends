@@ -9,7 +9,7 @@ export const FormikWrapper = styled.div`
 export const SignUpLogo = styled(Logo)`
   display: block;
   text-align: center;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 6px;
 `;
 

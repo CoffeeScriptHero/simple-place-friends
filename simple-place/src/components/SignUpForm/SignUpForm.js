@@ -83,7 +83,7 @@ export const SignUpForm = () => {
         {(formikProps) => {
           return (
             <Form noValidate>
-              <SignUpLogo to="/">SimplePlace</SignUpLogo>
+              <SignUpLogo to="/">RiseNet</SignUpLogo>
               {showError && <RequiredMessage>{errorMessage}</RequiredMessage>}
               <div>
                 <Field
