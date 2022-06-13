@@ -44,7 +44,9 @@ const Header = () => {
     <HeaderWrapper>
       <MainContainer>
         <Nav>
-          <Logo to="/">SimplePlace</Logo>
+          <Logo fontSize="24px" to="/">
+            RiseNet
+          </Logo>
           <SearchBar />
           <IconsWrapper>
             <Icon path="/" type="home" />

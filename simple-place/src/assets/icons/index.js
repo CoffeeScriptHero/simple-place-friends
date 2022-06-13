@@ -14,3 +14,4 @@ export { pencil } from "./pencil";
 export { magnifier } from "./magnifier";
 export { circlecross } from "./circlecross";
 export { logout } from "./logout";
+export { scrollarrow } from "./scrollarrow";

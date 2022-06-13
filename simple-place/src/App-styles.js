@@ -17,7 +17,7 @@ export const LinkMessage = styled(Link)`
 
 export const Logo = styled(LinkMessage)`
   margin: 0;
-  font-size: 20px;
+  font-size: ${(props) => props.fontSize || "20px"};
   user-select: none;
   color: black;
   font-family: Quicksand;

@@ -7,7 +7,7 @@ const NotFound = () => {
       <Title>Sorry, this page is not available.</Title>
       <Message>
         The link you followed may be broken or the page may not exist.{" "}
-        <MainPageLink to="/">Back to SimplePlace.</MainPageLink>
+        <MainPageLink to="/">Back to RiseNet.</MainPageLink>
       </Message>
     </Wrapper>
   );

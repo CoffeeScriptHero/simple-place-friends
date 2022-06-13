@@ -72,7 +72,7 @@ const User = () => {
 
   const usernameHandler = () => {
     const newUsername = usernameRef.current.textContent;
-    const usernameRegex = /^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
+    const usernameRegex = /^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+$/;
 
     if (editableUsername === true) {
       if (!usernameRegex.test(newUsername)) {
