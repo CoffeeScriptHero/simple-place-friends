@@ -1,6 +1,12 @@
 import React, { useState } from "react";
-import { HeaderWrapper, Nav, IconsWrapper } from "./Header-styles";
-import { Logo } from "../../App-styles";
+import {
+  HeaderWrapper,
+  Nav,
+  Logo,
+  LogoWrapper,
+  IconsWrapper,
+} from "./Header-styles";
+import { Image } from "../../App-styles";
 import { MainContainer } from "../../App-styles";
 import Icon from "../Icon/Icon";
 import ProfileIcon from "../ProfileIcon/ProfileIcon";
@@ -11,6 +17,7 @@ import AddPostModal from "../AddPostModal/AddPostModal";
 import SearchBar from "../SearchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
 import { deleteCookie } from "../../services/CookiesService";
+import cow from "../../assets/images/cow.png";
 
 const Header = () => {
   const username = useSelector(userSelectors.getUser()).user;
@@ -44,9 +51,12 @@ const Header = () => {
     <HeaderWrapper>
       <MainContainer>
         <Nav>
-          <Logo fontSize="24px" to="/">
-            RiseNet
-          </Logo>
+          <LogoWrapper to="/">
+            <Image src={cow} alt="cow logo" width="30px" height="32px"></Image>
+            <Logo pointerEvents="none" fontSize="24px" to="/">
+              RiseNet
+            </Logo>
+          </LogoWrapper>
           <SearchBar />
           <IconsWrapper>
             <Icon path="/" type="home" />

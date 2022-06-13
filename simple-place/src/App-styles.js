@@ -15,10 +15,16 @@ export const LinkMessage = styled(Link)`
   cursor: pointer;
 `;
 
+export const Image = styled.img`
+  width: ${(props) => props.width || "30px"};
+  height: ${(props) => props.height || "30px"};
+`;
+
 export const Logo = styled(LinkMessage)`
   margin: 0;
   font-size: ${(props) => props.fontSize || "20px"};
   user-select: none;
+  pointer-events: ${(props) => props.pointerEvents || "auto"};
   color: black;
   font-family: Quicksand;
   font-weight: bold;
@@ -43,4 +49,3 @@ export const Modal = styled.div`
   justify-content: center;
   z-index: 100;
 `;
-// dimmed background for modal windows (postModal, usersModal)
