@@ -12,6 +12,7 @@ import SegoeWoff400 from "./assets/fonts/SegoeUI/Segoe-UI.woff";
 
 const GlobalCSS = createGlobalStyle`
 body {
+  overflow-y: scroll;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
