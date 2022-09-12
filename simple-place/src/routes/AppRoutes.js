@@ -10,6 +10,7 @@ import UsersModal from "../components/UsersModal/UsersModal.js";
 import PostModal from "../components/PostModal/PostModal.js";
 import { userOperations } from "../store/user/index.js";
 import { getCookie } from "../services/CookiesService.js";
+import GamesPage from "../pages/GamesPage/GamesPage.js";
 
 const AppRoutes = () => {
   const dispatch = useDispatch();
@@ -37,6 +38,8 @@ const AppRoutes = () => {
         <Route path="following" element={<UsersModal />} />
         <Route path="p/:id" element={<PostModal />} />
       </Route>
+      <Route path="/games/g/:id" element={<div>game</div>} />
+      <Route path="/games/:category" element={<GamesPage />} />
     </Routes>
   );
 };

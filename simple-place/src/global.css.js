@@ -10,6 +10,8 @@ import SegoeWoff700 from "./assets/fonts/SegoeUI/Segoe-UI-Bold.woff";
 import SegoeWoff400Italic from "./assets/fonts/SegoeUI/Segoe-UI-Italic.woff";
 import SegoeWoff400 from "./assets/fonts/SegoeUI/Segoe-UI.woff";
 
+import LubalinGraph700 from "./assets/fonts/LubalinGraph/LubalinGraph-Bold.woff";
+
 const GlobalCSS = createGlobalStyle`
 body {
   overflow-y: scroll;
@@ -78,10 +80,11 @@ body {
     font-weight: normal;
   }  
 
-  // @font-face{
-  //   font-family: "San Francisco";
-  //   src: local(")
-  // }
+  @font-face{
+    font-family: "Lubalin Graph";
+    src: local("Lubalin Graph"), url(${LubalinGraph700}) format("woff");
+    font-weight: 700;
+  }
 `;
 
 export default GlobalCSS;

@@ -63,7 +63,7 @@ export const deleteProfileImg = async (data) => {
   const response = await fetch("/api/main_user/delete-profile-img", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ data }),
+    body: JSON.stringify(data),
   });
   return response;
 };

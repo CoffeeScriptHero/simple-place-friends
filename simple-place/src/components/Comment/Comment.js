@@ -59,7 +59,12 @@ const Comment = ({
   return (
     <CommentWrapper>
       <ProfileImgWrapper>
-        <ProfileIcon src={profileImg} width="34px" height="34px" />
+        <ProfileIcon
+          username={username}
+          src={profileImg}
+          width="34px"
+          height="34px"
+        />
       </ProfileImgWrapper>
       <ContentWrapper>
         <Username

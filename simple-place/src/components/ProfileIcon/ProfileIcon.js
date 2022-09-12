@@ -6,7 +6,7 @@ const ProfileIcon = ({ src, username, isLink = true, ...rest }) => {
     <Wrapper {...rest}>
       {username && isLink && (
         <UserLink to={`/${username}`}>
-          <Avatar {...rest} src={src}></Avatar>
+          <Avatar {...rest} cursor={"pointer"} src={src}></Avatar>
         </UserLink>
       )}
       {username && !isLink && <Avatar {...rest} src={src}></Avatar>}

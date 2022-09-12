@@ -8,12 +8,10 @@ import { userSelectors } from "../../store/user";
 import { useSelector } from "react-redux";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "../Loader/Loader";
-import { postModalSelectors } from "../../store/postModal";
 
 const Posts = () => {
   const mainUserId = getCookie("id");
   const user = useSelector(userSelectors.getUser());
-  const postModal = useSelector(postModalSelectors.getModalInfo());
   const [posts, setPosts] = useState([]);
   const [from, setFrom] = useState(0);
   const [showModal, setShowModal] = useState(false);

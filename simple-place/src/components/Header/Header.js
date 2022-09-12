@@ -61,6 +61,7 @@ const Header = () => {
           <IconsWrapper>
             <Icon path="/" type="home" />
             <Icon pointer type="add" onClick={() => setShowModal(!showModal)} />
+            <Icon path="/games/all" pointer type="gamepad" />
             <Icon pointer type="logout" onClick={showConfirmationModal} />
             <ProfileIcon username={username} src={img} cursor="pointer" />
           </IconsWrapper>
