@@ -4,6 +4,8 @@ import GamesCategories, {
   categories,
 } from "../../components/GamesCategories/GamesCategories";
 import { getGames } from "../../services/GamesService";
+import Loader from "../../components/Loader/Loader";
+import NotFound from "../NotFound/NotFound";
 import {
   Container,
   GamesTitle,
@@ -14,15 +16,29 @@ import {
 
 const GamesPage = () => {
   const { category } = useParams();
+  const [pageLoading, setPageLoading] = useState(true);
+  const [gamesLoading, setGamesLoading] = useState(true);
+  const [categoryExist, setCategoryExist] = useState(true);
   const [games, setGames] = useState([]);
 
   useEffect(() => {
     if (categories.includes(category)) {
+      setGamesLoading(true);
       getGames(category)
         .then((res) => res.json())
-        .then((res) => setGames(res.games));
+        .then((res) => {
+          setGamesLoading(false);
+          setCategoryExist(true);
+          setGames(res.games);
+          setPageLoading(false);
+        });
+    } else {
+      setCategoryExist(false);
+      setPageLoading(false);
     }
   }, [category]);
+
+  if (!pageLoading && !categoryExist) return <NotFound />;
 
   const gamesList = games.map((g) => (
     <GamePreviewLink to={`/games/g/${g.name}`} key={g.id}>
@@ -30,13 +46,17 @@ const GamesPage = () => {
     </GamePreviewLink>
   ));
 
+  if (pageLoading) return <Loader />;
+
   return (
     <Container>
+      {<GamesCategories currentCategory={category} />}
       <GamesWrapper>
         <GamesTitle>Games</GamesTitle>
-        {gamesList}
+        {gamesLoading && <Loader />}
+        {games.length > 0 && !gamesLoading && gamesList}
+        {games.length === 0 && !gamesLoading && <p>No games</p>}
       </GamesWrapper>
-      <GamesCategories currentCategory={category} />
     </Container>
   );
 };

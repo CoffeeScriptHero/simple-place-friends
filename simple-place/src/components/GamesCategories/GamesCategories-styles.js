@@ -62,19 +62,8 @@ export const CategoryItem = styled.li`
       width: 150px;
       background: transparent;
       border: 2px solid #000;
-      right: 10px;
+      right: 7.5px;
     }
-    // &::before {
-    //   content: "";
-    //   display: ${(props) => (props.isChosen ? "none" : "block")};
-    //   position: absolute;
-    //   height: 30px;
-    //   width: 170px;
-    //   background: transparent;
-    //   border-top: 2px solid #000;
-    //   border-bottom: 2px solid #000;
-    //   right: 0.5px;
-    // }
   }
   &::before {
     content: "";

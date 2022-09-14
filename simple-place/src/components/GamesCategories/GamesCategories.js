@@ -28,7 +28,7 @@ const categoriesIcons = {
   ".io": "ioCategory",
 };
 
-const GamesCategories = ({ currentCategory = null }) => {
+const GamesCategories = React.memo(({ currentCategory = null }) => {
   const categoriesList = categories.map((c) => {
     const name = c[0].toUpperCase() + c.substring(1);
     return (
@@ -51,6 +51,6 @@ const GamesCategories = ({ currentCategory = null }) => {
       <CategoriesList>{categoriesList}</CategoriesList>
     </Wrapper>
   );
-};
+});
 
 export default GamesCategories;
