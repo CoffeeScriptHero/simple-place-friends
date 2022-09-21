@@ -12,6 +12,7 @@ const mainUserRoutes = require("./routes/main_user.routes");
 const usersRoutes = require("./routes/users.routes");
 const postRoutes = require("./routes/post.routes");
 const gamesRoutes = require("./routes/games.routes");
+const UserModel = require("./models/UserModel");
 const URI = process.env.MONGO_CONNECTION_URL;
 
 mongoose
@@ -35,6 +36,6 @@ app.use("/api/post", postRoutes);
 app.use("/api/users", usersRoutes);
 app.use("/api/games", gamesRoutes);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log(`Server listening on the PORT::${PORT}`);
 });

@@ -18,6 +18,7 @@ router.post("/add-post", async (req, res) => {
       {
         upload_preset: CLOUDINARY_POSTS_PRESET,
         public_id: POST_ID,
+        secure: true,
       }
     );
 
@@ -27,7 +28,7 @@ router.post("/add-post", async (req, res) => {
       userId: userId,
       comments: [],
       likes: [],
-      image: uploadedResponse.url,
+      image: uploadedResponse.secure_url,
     });
 
     res.status(200).json({
@@ -37,7 +38,7 @@ router.post("/add-post", async (req, res) => {
       userId: userId,
       comments: [],
       likes: [],
-      image: uploadedResponse.url,
+      image: uploadedResponse.secure_url,
     });
   } catch {
     res.status(500).json({ message: "unexpected error" });

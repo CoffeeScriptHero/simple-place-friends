@@ -91,6 +91,7 @@ router.post("/change-profile-img", async (req, res) => {
       {
         upload_preset: CLOUDINARY_PROFILE_PICS_PRESET,
         public_id: PUBLIC_ID,
+        secure: true,
       }
     );
 
@@ -98,18 +99,18 @@ router.post("/change-profile-img", async (req, res) => {
       {
         id: userId,
       },
-      { $set: { profileImg: uploadedResponse.url } }
+      { $set: { profileImg: uploadedResponse.secure_url } }
     );
 
     await PostModel.updateMany(
       { "comments.commentUserId": userId },
-      { $set: { "comments.$[c].profileImg": uploadedResponse.url } },
+      { $set: { "comments.$[c].profileImg": uploadedResponse.secure_url } },
       { arrayFilters: [{ "c.commentUserId": userId }] }
     );
 
     res.status(200).json({
       status: 200,
-      image: uploadedResponse.url,
+      image: uploadedResponse.secure_url,
     });
   } catch {
     res.status(500).json({ message: "unexpected error" });
