@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/static/js/main.fccabc81.js",
+    "static/media/cow.png": "/static/media/cow.5ddec6c5043755ad2dfd.png",
+    "static/media/Quicksand-SemiBold.woff": "/static/media/Quicksand-SemiBold.56a5d56a6058dafa2c4c.woff",
+    "static/media/Quicksand-Medium.woff": "/static/media/Quicksand-Medium.08ebd3be8f677260d30b.woff",
+    "static/media/Quicksand-Regular.woff": "/static/media/Quicksand-Regular.f836bce68cdd4f9a1816.woff",
+    "static/media/Quicksand-Bold.woff": "/static/media/Quicksand-Bold.e0846e5c77c67c2839d9.woff",
+    "static/media/Segoe-UI-Bold-Italic.woff": "/static/media/Segoe-UI-Bold-Italic.10be953b9a37b3952b8d.woff",
+    "static/media/Segoe-UI-Italic.woff": "/static/media/Segoe-UI-Italic.9918227c02df2f80f163.woff",
+    "static/media/Segoe-UI-Bold.woff": "/static/media/Segoe-UI-Bold.750128e7a4622e3a06a3.woff",
+    "static/media/Segoe-UI.woff": "/static/media/Segoe-UI.c60a917e36177fe576d1.woff",
+    "index.html": "/index.html",
+    "main.fccabc81.js.map": "/static/js/main.fccabc81.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fccabc81.js"
+  ]
+}
