@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { MainContainer } from "../../App-styles";
 
-export const Container = styled(MainContainer)`
+export const Container = styled.div`
+  width: 1128px;
+  height: 830px;
+  margin: auto;
   background: aqua;
-  height: 800px;
 `;
 
 export const GameTitle = styled.h1`
